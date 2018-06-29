@@ -59,15 +59,4 @@ public class RestDmSchedulerSeatService {
         DmSchedulerSeat dmSchedulerSeat = dmSchedulerSeatMapper.getDmSchedulerSeatByOrder(scheduleId, x, y);
         return dmSchedulerSeat;
     }
-    /***
-     * 查询剧院座位
-     * @param params
-     * @return
-     * @throws Exception
-     */
-    @RequestMapping(value = "/queryCinemaSeatArray", method = RequestMethod.POST)
-    public List<String> queryCinemaSeatArray(@RequestBody Map<String, Object> params) throws Exception{
-        List<String> seatArray=dmSchedulerSeatMapper.queryCinemaSeatArray(params);
-        return seatArray;
-    }
 }
